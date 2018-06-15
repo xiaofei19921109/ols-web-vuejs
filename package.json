@@ -1,0 +1,19 @@
+{
+  "name": "ols-web",
+  "version": "1.0.0",
+  "description": "Online learning system web client",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tw-nho/ols-web.git"
+  },
+  "author": "Shenjian Yuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tw-nho/ols-web/issues"
+  },
+  "homepage": "https://github.com/tw-nho/ols-web#readme"
+}
