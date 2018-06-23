@@ -8,6 +8,11 @@
 </template>
 
 <style>
+.panel {
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(255,255,255,0.95);
+}
 .panel-header {
   padding: 1px 20px;
   background-color: rgba(96, 125, 139, 0.95);
