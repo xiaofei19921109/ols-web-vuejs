@@ -1,6 +1,6 @@
 {
   "name": "ols-web",
-  "version": "1.0.0", 
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tw-nho/ols-web.git"
@@ -21,6 +21,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^2.4.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
