@@ -23,5 +23,10 @@
         <el-button type="primary">登陆</el-button>
       </el-col>
     </el-form-item>
+    <el-form-item>
+      <el-col :span="1">
+        <router-link to="/signup">注册</router-link>
+      </el-col>
+    </el-form-item>
   </el-form>
 </template>
