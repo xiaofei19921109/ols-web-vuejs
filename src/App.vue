@@ -12,7 +12,12 @@ export default {
 
 <style>
 @import url(./style/reset.css);
-
+body {
+  background-image: url(./assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
