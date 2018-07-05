@@ -38,6 +38,7 @@
 
 <script>
   import api from '@/api'
+
   export default {
     data() {
       return {
@@ -50,7 +51,7 @@
         rules: {
           userName: [
             {required: true, message: '请输入用户名', trigger: 'blur'},
-            { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
+            {type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change']}
           ],
           password: [
             {required: true, message: '请输入密码', trigger: 'blur'}
