@@ -24,6 +24,10 @@ export default {
   color: #2c3e50;
 }
 body {
-  min-width: 800px;
+  min-width: 1100px;
+  margin: 0;
+}
+* {
+  outline: none;
 }
 </style>

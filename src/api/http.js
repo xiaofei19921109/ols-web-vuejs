@@ -1,8 +1,13 @@
-import Axios from 'axios'
+import axios from 'axios'
 import storeBase from './../store/'
 
-const ax = new Axios({
-  headers: {'X-Requested-Token': storeBase.state.user.token}
-})
+const instance = axios.create({
+  baseURL: 'https://localhost:8080/api',
+  timeout: 1000,
+  headers: {
+    'X-Requested-Token': storeBase.state.user.token
+  }
+});
 
-export default ax
+
+export default instance;

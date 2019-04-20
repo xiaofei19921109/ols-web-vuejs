@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import SignIn from '@/components/SignIn'
 import SignUp from '@/components/SignUp'
 import CampList from '@/components/Camps';
+import CampCreate from '@/components/Camps/CampCreate';
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
           component: CampList
         },
       ]
+    },
+    {
+      path: '/camps/create',
+      name: 'CampCreate',
+      component: CampCreate
     },
   ]
 })
