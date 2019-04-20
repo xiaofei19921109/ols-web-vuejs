@@ -1,12 +1,18 @@
 <template>
   <div id="app">
+    <header v-if="isLogin"></header>
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  computed: {
+    isLogin(){
+      return false;
+    }
+  }
 }
 </script>
 
@@ -16,5 +22,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+body {
+  min-width: 800px;
 }
 </style>
