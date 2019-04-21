@@ -5,7 +5,7 @@
     <p class="card__description">{{this.description}}</p>
     <footer class="card__footer">
       <span class="card__open-date">
-        <time>{{this.openDate}}</time>
+        <time>{{this.date}}</time>
         开营
       </span>
     </footer>
@@ -14,6 +14,7 @@
 
 <script>
   import CampCard from '../CampCard';
+  import {formatDate} from '@/utils'
 
   export default {
     name: 'AddCampCard',
@@ -32,6 +33,11 @@
       "openDate": {
         type: String,
         required: true
+      }
+    },
+    computed: {
+      date() {
+        return formatDate(this.openDate)
       }
     },
     methods: {
