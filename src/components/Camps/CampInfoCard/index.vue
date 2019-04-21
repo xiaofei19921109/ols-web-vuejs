@@ -31,7 +31,7 @@
         type: String,
       },
       "openDate": {
-        type: String,
+        type: Number,
         required: true
       }
     },
@@ -94,8 +94,9 @@
 
     .el-icon-close {
       position: absolute;
-      top: 10px;
-      right: 10px;
+      padding: 10px;
+      top: 0;
+      right: 0;
     }
   }
 </style>

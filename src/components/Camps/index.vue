@@ -63,9 +63,8 @@
       handleClose() {
         this.dialogVisible = false;
         api.deleteCamp(this.willDeleteCampId).then(() => {
-          this.camps = this.camps.filter(camp => {
-            camp !== this.willDeleteCampId;
-          })
+          const index = this.camps.findIndex(({ id }) => id === this.willDeleteCampId);
+          this.camps.splice(index, 1);
           this.willDeleteCampId = null;
         })
       },
