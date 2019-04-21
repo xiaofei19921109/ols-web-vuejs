@@ -23,7 +23,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+html {
+  font-size: 12px;
+}
 body {
+  /*TODO: 800?*/
   min-width: 1100px;
   margin: 0;
   font-size: 14px;

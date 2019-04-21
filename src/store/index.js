@@ -4,5 +4,11 @@ export default {
       userName: '',
       token: ''
     }
+  },
+  mutations: {
+    login(state, data) {
+      state.token = data.token;
+
+    }
   }
 }

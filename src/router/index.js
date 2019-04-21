@@ -22,12 +22,8 @@ export default new Router({
     },
     {
       path: '/camps',
-      children: [
-        {
-          path: '',
-          component: CampList
-        },
-      ]
+      name: 'CampList',
+      component: CampList,
     },
     {
       path: '/camps/create',
