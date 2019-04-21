@@ -24,10 +24,9 @@ export default {
   color: #2c3e50;
 }
 html {
-  font-size: 12px;
+  font-size: 14px;
 }
 body {
-  /*TODO: 800?*/
   min-width: 1100px;
   margin: 0;
   font-size: 14px;

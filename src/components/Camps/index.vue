@@ -78,7 +78,7 @@
     },
     methods: {
       onAddCampClick() {
-        this.$router.push('/camp/add');
+        this.$router.push('/camps/create');
       },
       onCampInfoClick(id) {
         this.$router.push('/camp/' + id);
