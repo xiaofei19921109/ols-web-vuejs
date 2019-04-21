@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <header v-if="isLogin"></header>
+    <camp-header v-if="isLogin">
+    </camp-header>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Header from '@/components/Header';
 export default {
   name: 'App',
   computed: {
     isLogin(){
-      return false;
+      return true;
     }
+  },
+  components: {
+    'camp-header': Header
   }
 }
 </script>

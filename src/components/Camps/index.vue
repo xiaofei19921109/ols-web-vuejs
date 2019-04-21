@@ -41,47 +41,20 @@
         keyword: '',
         dialogVisible: false,
         willDeleteCampId: null,
-        camps: [
-          {
-            id: 1,
-            name: '敏捷训练营',
-            description: '京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。',
-            openDate: '2018-11-15'
-          }, {
-            id: 2,
-            name: '敏捷训练营',
-            description: '京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。',
-            openDate: '2018-11-15'
-          }, {
-            id: 3,
-            name: '敏捷训练营',
-            description: '京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。',
-            openDate: '2018-11-15'
-          }, {
-            id: 4,
-            name: '敏捷训练营',
-            description: '京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。',
-            openDate: '2018-11-15'
-          }, {
-            id: 5,
-            name: '敏捷训练营',
-            description: '京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。',
-            openDate: '2018-11-15'
-          }, {
-            id: 6,
-            name: '敏捷训练营',
-            description: '京东敏捷实战特训，京东内部的高绩效团队培训，真正的敏捷培训，为你深度分享用户故事、敏捷估算、敏捷项目计划及跟踪（任务看板、每日会议）等敏捷实践。',
-            openDate: '2018-11-15'
-          },
-        ]
+        camps: []
       }
+    },
+    created() {
+      api.getCamps().then(data => {
+        this.camps = data;
+      })
     },
     methods: {
       onAddCampClick() {
         this.$router.push('/camps/create');
       },
       onCampInfoClick(id) {
-        this.$router.push('/camp/' + id);
+        this.$router.push('/camps/' + id);
       },
       onCampInfoClose(id) {
         this.dialogVisible = true;
@@ -89,8 +62,12 @@
       },
       handleClose() {
         this.dialogVisible = false;
-        // TODO: api
-        this.willDeleteCampId = null;
+        api.deleteCamp(this.willDeleteCampId).then(() => {
+          this.camps = this.camps.filter(camp => {
+            camp !== this.willDeleteCampId;
+          })
+          this.willDeleteCampId = null;
+        })
       },
       search(formName) {
         console.log(this.keyword)
