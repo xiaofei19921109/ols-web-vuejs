@@ -1,0 +1,46 @@
+.root {
+  width: 340px;
+  height: 200px;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  background: #ffffff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.root:hover {
+  box-shadow: 0 0 10px 0 #00b4c5;
+}
+
+.name {
+  font-size: 18px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #00b4c5;
+  margin: 0;
+}
+
+.description {
+  margin: 20px 0 10px;
+  line-height: 20px;
+  width: 275px;
+  height: 80px;
+  color: #686868;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  height: 20px;
+  line-height: 20px;
+  color: #686868;
+}

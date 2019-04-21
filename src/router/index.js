@@ -4,6 +4,7 @@ import SignIn from '@/components/SignIn'
 import SignUp from '@/components/SignUp'
 import CampList from '@/components/Camps';
 import CampCreate from '@/components/Camps/CampCreate';
+import CampDetail from '@/components/Camps/CampDetail';
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/camps/create',
       name: 'CampCreate',
       component: CampCreate
+    },
+    {
+      path: '/camps/:id',
+      name: 'CampDetail',
+      component: CampDetail
     },
   ]
 })

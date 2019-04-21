@@ -8,4 +8,8 @@ export default {
   createCamp(camp) {
     return http.post('/camp', camp);
   },
+
+  getCamp(id) {
+    return http.get(`/camp/${id}`);
+  },
 }

@@ -26,6 +26,7 @@ export default {
 body {
   min-width: 1100px;
   margin: 0;
+  font-size: 14px;
 }
 * {
   outline: none;

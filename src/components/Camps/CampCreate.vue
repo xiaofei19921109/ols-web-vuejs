@@ -25,6 +25,8 @@
   import api from '@/api';
 
   export default {
+    name: 'CampCreate',
+
     data() {
       return {
         form: {

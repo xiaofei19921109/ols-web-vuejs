@@ -1,0 +1,39 @@
+.root {
+  display: flex;
+  align-items: center;
+  width: 320px;
+  color: #686868;
+  cursor: pointer;
+}
+
+.root:hover {
+  color: #00b4c5;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #eee no-repeat center / cover;
+}
+
+.name {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 45px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.email {
+  width: 170px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.score {
+  width: 20px;
+  text-align: center;
+}
