@@ -52,11 +52,24 @@
       }
     },
 
+    computed: {
+      id() {
+        return this.$route.params.id;
+      },
+    },
+
     mounted() {
-      api.getCamp(this.$route.params.id).then(({ camp, missions, students }) => {
-        this.camp = camp;
-        this.missions = missions;
-        this.students = students;
+      if (!this.id) {
+        this.$router.replace({ path: '/camps' });
+        return;
+      }
+
+      api.getCamp(this.id).then(({ camp, missions, students }) => {
+        Object.assign(this, {
+          camp,
+          missions,
+          students,
+        });
       });
     },
   }
